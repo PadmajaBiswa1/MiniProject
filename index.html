@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitNexus</title>
+    <title>CareCal Fitness</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -645,7 +645,7 @@
             <div class="header-content">
                 <div class="logo">
                     <i class="fas fa-chart-line"></i>
-                    <span>FitNexus</span>
+                    <span>CareCal Fitness</span>
                 </div>
                 <div id="authSection" class="auth-section">
                     <!-- This will be populated by JavaScript based on auth status -->
@@ -798,7 +798,7 @@
                     </div>
 
                     <div class="goal-section" id="healthRecommendations" style="display: none;">
-                        <div class="goal-title">Health-Specific Recommendations</div>
+                        <div class="goal-title">Nutrition & Fitness Recommendations</div>
                         <div class="recommendation-grid">
                             <div class="recommendation-item">
                                 <div class="recommendation-item-title">Recommended Foods</div>
@@ -1105,7 +1105,7 @@
             <div id="registerView" class="auth-container hidden">
                 <div class="auth-header">
                     <h1 class="auth-title">Create Account</h1>
-                    <p class="auth-subtitle">Join FitNexus to start your fitness journey</p>
+                    <p class="auth-subtitle">Join CareCal Fitness to start your fitness journey</p>
                 </div>
                 
                 <form id="registerForm">
@@ -1152,7 +1152,7 @@
     
     <footer>
         <div class="container">
-            <p>FitNexus &copy; 2025 | Track your fitness journey with precision</p>
+            <p>CareCal Fitness &copy; 2025 | Track your fitness journey with precision</p>
         </div>
     </footer>
 
@@ -1611,11 +1611,7 @@ async function calculateRecommendations() {
         document.getElementById('recommendedActivities').textContent = healthRecs.activity;
         
         // Show health recommendations section if user has a condition
-        if (healthCondition !== 'none') {
-            document.getElementById('healthRecommendations').style.display = 'block';
-        } else {
-            document.getElementById('healthRecommendations').style.display = 'none';
-        }
+         document.getElementById('healthRecommendations').style.display = 'block';
         
         showRecommendationsPage();
     } catch (error) {
